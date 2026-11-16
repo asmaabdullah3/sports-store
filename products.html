@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Store | Products</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sports Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Our Sports Products</h2>
+      <p>Explore our sports equipment collection.</p>
+
+      <!-- Search by Product Name -->
+      <input
+        type="search"
+        id="search-box"
+        placeholder="Search for sports equipment..."
+        aria-label="Search products by name"
+      >
+
+      <!-- Category Filter -->
+      <select id="category-filter" aria-label="Filter by category">
+        <option value="">All Categories</option>
+        <option value="Football">Football</option>
+        <option value="Basketball">Basketball</option>
+        <option value="Tennis">Tennis</option>
+        <option value="Fitness">Fitness</option>
+        <option value="Swimming">Swimming</option>
+      </select>
+
+      <!-- Price Sorting -->
+      <select id="sort-select" aria-label="Sort by price">
+        <option value="">Sort by Price</option>
+        <option value="asc">Price: Low to High</option>
+        <option value="desc">Price: High to Low</option>
+      </select>
+
+      <!-- Smart Search -->
+      <h3>Smart Product Search</h3>
+
+      <input
+        type="number"
+        id="min-price"
+        placeholder="Min Price (AED)"
+        min="0"
+      >
+
+      <input
+        type="number"
+        id="max-price"
+        placeholder="Max Price (AED)"
+        min="0"
+      >
+
+      <label>
+        <input type="checkbox" id="in-stock">
+        In Stock Only
+      </label>
+
+      <button id="smart-search-btn" type="button">
+        Smart Search
+      </button>
+
+      <!-- Products from Supabase -->
+      <div id="product-list">
+        <p>Products will appear here after connecting Supabase.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sports Store. All rights reserved.</p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/app.js"></script>
+</body>
+</html> 
